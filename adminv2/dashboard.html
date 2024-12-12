@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Organic Web</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="admin-dashboard">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <h2>
+                <div class="logo">
+                    <img src="../img/logo.png" alt="Organicfood Logo">
+                </div>
+            </h2>
+        </br>
+            <h2>ADMIN</h2>
+            <nav>
+                <a href="dashboard.html"> <i class="fas fa-home"></i> Trang chính</a>
+                <a href="manage-category.html"> <i class="fas fa-list"></i> Quản lý danh mục</a>
+                <a href="manage-product.html"> <i class="fas fa-box"></i> Quản lý sản phẩm</a>
+                <!-- <a href="#"> <i class="fas fa-newspaper"></i> Quản lý tin tức</a> -->
+                <a href="manage-user.html"> <i class="fas fa-users"></i> Quản lý người dùng</a>
+                <a href="manage-order.html"> <i class="fas fa-shopping-cart"></i> Quản lý hóa đơn</a>
+                <!-- <a href="#"> <i class="fas fa-chart-bar"></i> Thống kê</a> -->
+                <a href="statistic.html" class="active"> <i class="fas fa-chart-line"></i> Thống kê kinh doanh</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <header class="top-bar">
+                <a href="login.html" class="logout-button">Đăng xuất</a>
+            </header>
+
+            <!-- Statistics Section -->
+            <section class="statistics">
+                <div class="stat-box blue">
+                    <i class="fas fa-box fa-3x"></i>
+                    <h3>48</h3>
+                    <p>Sản phẩm</p>
+                    <a href="manage-product.html">Xem chi tiết</a>
+                </div>
+                <div class="stat-box orange">
+                    <i class="fas fa-shopping-cart fa-3x"></i>
+                    <h3>9</h3>
+                    <p>Hóa đơn</p>
+                    <a href="manage-order.html">Xem chi tiết</a>
+                </div>
+                <div class="stat-box red">
+                    <i class="fas fa-users fa-3x"></i>
+                    <h3>5</h3>
+                    <p>Người dùng</p>
+                    <a href="manage-user.html">Xem chi tiết</a>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Sản Phẩm</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product.css">
+    <script src="product.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="admin-dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>
+                <div class="logo">
+                    <img src="../img/logo.png" alt="Organicfood Logo">
+                </div>
+            </h2>
+        </br>
+            <h2>ADMIN</h2>
+            <nav>
+                <a href="dashboard.html"> <i class="fas fa-home"></i> Trang chính</a>
+                <a href="manage-category.html"> <i class="fas fa-list"></i> Quản lý danh mục</a>
+                <a href="manage-product.html" class="active"> <i class="fas fa-box"></i> Quản lý sản phẩm</a>
+                <a href="manage-user.html"> <i class="fas fa-users"></i> Quản lý người dùng</a>
+                <a href="manage-order.html"> <i class="fas fa-shopping-cart"></i> Quản lý hóa đơn</a>
+                <a href="statistic.html" class="active"> <i class="fas fa-chart-line"></i> Thống kê kinh doanh</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <header class="top-bar">
+                <a href="login.html" class="logout-button">Đăng xuất</a>
+            </header>
+
+            <!-- Product Management Section -->
+            <section class="management-section">
+                <h1>Quản Lý Sản Phẩm</h1>
+                <button class="add-button" onclick="openModal('add')">Thêm Sản Phẩm</button>
+                <table class="management-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Tên Sản Phẩm</th>
+                            <th>Giá</th>
+                            <th>Ảnh</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Táo</td>
+                            <td>50,000 VNĐ</td>
+                            <td><img src="../img/taohuuco.webp" alt="Táo" class="product-image" style="height: 100px; width: 100px;"></td>
+                            <td>
+                                <button class="edit-button" onclick="openModal('edit', 1)">Sửa</button>
+                                <button class="delete-button" onclick="deleteProduct(1)">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Rau Xanh</td>
+                            <td>20,000 VNĐ</td>
+                            <td><img src="../img/rau_ngot_ta_huu_co_-_300g.webp" alt="Rau Xanh" class="product-image" style="height: 100px; width: 100px;"></td>
+                            <td>
+                                <button class="edit-button" onclick="openModal('edit', 2)">Sửa</button>
+                                <button class="delete-button" onclick="deleteProduct(2)">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Cải kale</td>
+                            <td>30,000 VNĐ</td>
+                            <td><img src="../img/cai-kale-huu-co.jpg" alt="Cam" class="product-image" style="height: 100px; width: 100px;"></td>
+                            <td>
+                                <button class="edit-button" onclick="openModal('edit', 3)">Sửa</button>
+                                <button class="delete-button" onclick="deleteProduct(3)">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Xoài</td>
+                            <td>40,000 VNĐ</td>
+                            <td><img src="../img/xoai-cat-hoa-loc-chin-tui-1kg-1-3-trai-202211171439042124_c3ddfdf7d18f4a11be3d8457ac79d2b2.webp" alt="Xoài" class="product-image" style="height: 100px; width: 100px;"></td>
+                            <td>
+                                <button class="edit-button" onclick="openModal('edit', 4)">Sửa</button>
+                                <button class="delete-button" onclick="deleteProduct(4)">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Chuối</td>
+                            <td>15,000 VNĐ</td>
+                            <td><img src="../img/chuoi_gia_huu_co_vinamit_7be07dd7397e4ca89b19dfbd4d91bbba_grande.webp" alt="Chuối" class="product-image" style="height: 100px; width: 100px;"></td>
+                            <td>
+                                <button class="edit-button" onclick="openModal('edit', 5)">Sửa</button>
+                                <button class="delete-button" onclick="deleteProduct(5)">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Khoai Tây</td>
+                            <td>25,000 VNĐ</td>
+                            <td><img src="../img/khoai-tay-coop-organic-300g-ql-2023112.jpg" alt="Khoai Tây" class="product-image" style="height: 100px; width: 100px;"></td>
+                            <td>
+                                <button class="edit-button" onclick="openModal('edit', 6)">Sửa</button>
+                                <button class="delete-button" onclick="deleteProduct(6)">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Dưa Hấu</td>
+                            <td>35,000 VNĐ</td>
+                            <td><img src="../img/dua-hau.jpg" alt="Dưa Hấu" class="product-image" style="height: 100px; width: 100px;"></td>
+                            <td>
+                                <button class="edit-button" onclick="openModal('edit', 7)">Sửa</button>
+                                <button class="delete-button" onclick="deleteProduct(7)">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Nho</td>
+                            <td>60,000 VNĐ</td>
+                            <td><img src="../img/nho-den-huu-co.webp" alt="Nho" class="product-image" style="height: 100px; width: 100px;"></td>
+                            <td>
+                                <button class="edit-button" onclick="openModal('edit', 8)">Sửa</button>
+                                <button class="delete-button" onclick="deleteProduct(8)">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Đậu Xanh</td>
+                            <td>18,000 VNĐ</td>
+                            <td><img src="../img/greanbean.jpg" alt="Đậu Xanh" class="product-image" style="height: 100px; width: 100px;"></td>
+                            <td>
+                                <button class="edit-button" onclick="openModal('edit', 9)">Sửa</button>
+                                <button class="delete-button" onclick="deleteProduct(9)">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Ớt Chuông</td>
+                            <td>22,000 VNĐ</td>
+                            <td><img src="../img/ot-chuong.webp" alt="Ớt Chuông" class="product-image" style="height: 100px; width: 100px;"></td>
+                            <td>
+                                <button class="edit-button" onclick="openModal('edit', 10)">Sửa</button>
+                                <button class="delete-button" onclick="deleteProduct(10)">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>Hành Tây</td>
+                            <td>12,000 VNĐ</td>
+                            <td><img src="../img/hanh-tay.jpg" alt="Hành Tây" class="product-image" style="height: 100px; width: 100px;"></td>
+                            <td>
+                                <button class="edit-button" onclick="openModal('edit', 11)">Sửa</button>
+                                <button class="delete-button" onclick="deleteProduct(11)">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>Khoai Lang</td>
+                            <td>14,000 VNĐ</td>
+                            <td><img src="../img/khoai-lang.webp" alt="Khoai Lang" class="product-image" style="height: 100px; width: 100px;"></td>
+                            <td>
+                                <button class="edit-button" onclick="openModal('edit', 12)">Sửa</button>
+                                <button class="delete-button" onclick="deleteProduct(12)">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>Dưa Leo</td>
+                            <td>10,000 VNĐ</td>
+                            <td><img src="../img/dua-leo.webp" alt="Dưa Leo" class="product-image" style="height: 100px; width: 100px;"></td>
+                            <td>
+                                <button class="edit-button" onclick="openModal('edit', 13)">Sửa</button>
+                                <button class="delete-button" onclick="deleteProduct(13)">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>Bí Đỏ</td>
+                            <td>26,000 VNĐ</td>
+                            <td><img src="../img/bi_do_hat_dau_huu_co_b03f29a6449d4e7ebb7951b2e357e565_1024x1024.webp" alt="Bí Đỏ" class="product-image" style="height: 100px; width: 100px;"></td>
+                            <td>
+                                <button class="edit-button" onclick="openModal('edit', 14)">Sửa</button>
+                                <button class="delete-button" onclick="deleteProduct(14)">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>Dừa</td>
+                            <td>35,000 VNĐ</td>
+                            <td><img src="../img/dua.webp" alt="Dừa" class="product-image" style="height: 100px; width: 100px;"></td>
+                            <td>
+                                <button class="edit-button" onclick="openModal('edit', 15)">Sửa</button>
+                                <button class="delete-button" onclick="deleteProduct(15)">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>Lê</td>
+                            <td>50,000 VNĐ</td>
+                            <td><img src="../img/le.webp" alt="Lê" class="product-image" style="height: 100px; width: 100px;"></td>
+                            <td>
+                                <button class="edit-button" onclick="openModal('edit', 16)">Sửa</button>
+                                <button class="delete-button" onclick="deleteProduct(16)">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>Bắp Cải</td>
+                            <td>19,000 VNĐ</td>
+                            <td><img src="../img/bap-cai-trang-co-op-organic-kg-ql-20230113.jpg" alt="Bắp Cải" class="product-image" style="height: 100px; width: 100px;"></td>
+                            <td>
+                                <button class="edit-button" onclick="openModal('edit', 17)">Sửa</button>
+                                <button class="delete-button" onclick="deleteProduct(17)">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>Đậu Phộng</td>
+                            <td>8,000 VNĐ</td>
+                            <td><img src="../img/dau-phong.jpg" alt="Đậu Phộng" class="product-image" style="height: 100px; width: 100px;"></td>
+                            <td>
+                                <button class="edit-button" onclick="openModal('edit', 18)">Sửa</button>
+                                <button class="delete-button" onclick="deleteProduct(18)">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>Dâu Tây</td>
+                            <td>80,000 VNĐ</td>
+                            <td><img src="../img/dau-tay-my-organic-1.jpg" alt="Dâu Tây" class="product-image" style="height: 100px; width: 100px;"></td>
+                            <td>
+                                <button class="edit-button" onclick="openModal('edit', 19)">Sửa</button>
+                                <button class="delete-button" onclick="deleteProduct(19)">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>Ổi</td>
+                            <td>23,000 VNĐ</td>
+                            <td><img src="../img/oi_nu_hoang_huu_co_que_lam_6ea73a29bdad4ce3b41e5ca603a76405_grande.webp" alt="Ổi" class="product-image" style="height: 100px; width: 100px;"></td>
+                            <td>
+                                <button class="edit-button" onclick="openModal('edit', 20)">Sửa</button>
+                                <button class="delete-button" onclick="deleteProduct(20)">Xóa</button>
+                            </td>
+                        </tr>                        
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal for Adding/Editing Product -->
+    <div class="modal" id="product-modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title">Thêm Sản Phẩm</h2>
+            <form id="product-form">
+                <label for="product-name">Tên Sản Phẩm:</label>
+                <input type="text" id="product-name" required>
+                
+                <label for="product-price">Giá:</label>
+                <input type="text" id="product-price" required>
+                
+                <label for="product-image">Ảnh:</label>
+                <input type="file" id="product-image" accept="image/*">
+                
+                <button type="submit" id="submit-button">Lưu</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

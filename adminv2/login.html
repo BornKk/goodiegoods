@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Organic Web</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS cơ bản cho form đăng nhập */
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333333;
+        }
+
+        .login-container label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            color: #555555;
+            font-size: 14px;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .login-container button {
+            background: #4caf50;
+            color: #ffffff;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .login-container button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Admin Đăng Nhập</h2>
+        <!-- Form đăng nhập -->
+        <form id="loginForm">
+            <label for="username">Tài khoản:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Mật khẩu:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Đăng Nhập</button>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript xử lý logic form
+        document.getElementById("loginForm").addEventListener("submit", function (e) {
+            e.preventDefault(); // Ngăn chặn form gửi đi
+
+            // Lấy giá trị tài khoản và mật khẩu
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Kiểm tra thông tin đăng nhập (demo)
+            if (username === "admin" && password === "123456") {
+                // Chuyển đến dashboard.html nếu đúng
+                window.location.href = "dashboard.html";
+            } else {
+                // Thông báo lỗi nếu sai
+                alert("Tài khoản hoặc mật khẩu không đúng. Vui lòng thử lại!");
+            }
+        });
+    </script>
+</body>
+</html>

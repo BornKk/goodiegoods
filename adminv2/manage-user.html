@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Người Dùng</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="user.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="admin-dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>
+                <div class="logo">
+                    <img src="../img/logo.png" alt="Organicfood Logo">
+                </div>
+            </h2>
+        </br>
+            <h2>ADMIN</h2>
+            <nav>
+                <a href="dashboard.html"> <i class="fas fa-home"></i> Trang chính</a>
+                <a href="manage-category.html"> <i class="fas fa-list"></i> Quản lý danh mục</a>
+                <a href="manage-product.html"> <i class="fas fa-box"></i> Quản lý sản phẩm</a>
+                <a href="manage-user.html" class="active"> <i class="fas fa-users"></i> Quản lý người dùng</a>
+                <a href="manage-order.html"> <i class="fas fa-shopping-cart"></i> Quản lý hóa đơn</a>
+                <a href="statistic.html" class="active"> <i class="fas fa-chart-line"></i> Thống kê kinh doanh</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <header class="top-bar">
+                <input type="text" placeholder="Search...">
+                <a href="login.html" class="logout-button">Đăng xuất</a>
+            </header>
+
+            <!-- User Management Section -->
+            <section class="management-section">
+                <h1>Quản Lý Người Dùng</h1>
+                <button class="add-button" id="addUserButton">Thêm Người Dùng</button>
+                <table class="management-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Tên Người Dùng</th>
+                            <th>Email</th>
+                            <th>Trạng Thái</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userTable">
+                        <tr>
+                            <td>1</td>
+                            <td>Nguyễn Văn A</td>
+                            <td>vana@example.com</td>
+                            <td>Hoạt động</td>
+                            <td>
+                                <button class="edit-button" onclick="editUser(1)">Sửa</button>
+                                <button class="delete-button" onclick="deleteUser(1)">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Trần Thị B</td>
+                            <td>thib@example.com</td>
+                            <td>Không hoạt động</td>
+                            <td>
+                                <button class="edit-button" onclick="editUser(2)">Sửa</button>
+                                <button class="delete-button" onclick="deleteUser(2)">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Phạm Văn C</td>
+                            <td>vanc@example.com</td>
+                            <td>Hoạt động</td>
+                            <td>
+                                <button class="edit-button" onclick="editUser(3)">Sửa</button>
+                                <button class="delete-button" onclick="deleteUser(3)">Xóa</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal for Adding/Editing User -->
+    <div id="userModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Thêm Người Dùng</h2>
+            <form id="userForm">
+                <input type="hidden" id="userId">
+                <label for="userName">Tên Người Dùng:</label>
+                <input type="text" id="userName" placeholder="Nhập tên người dùng" required>
+                <label for="userEmail">Email:</label>
+                <input type="email" id="userEmail" placeholder="Nhập email" required>
+                <label for="userStatus">Trạng Thái:</label>
+                <select id="userStatus">
+                    <option value="Hoạt động">Hoạt động</option>
+                    <option value="Không hoạt động">Không hoạt động</option>
+                </select>
+
+                <div style="margin-top: 20px;">
+                    <button type="button" class="save-button" onclick="saveUser()">Lưu</button>
+                    <button type="button" class="cancel-button" onclick="closeModal()">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="user.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Danh Mục</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="admin-dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>
+                <div class="logo">
+                    <img src="../img/logo.png" alt="Organicfood Logo">
+                </div>
+            </h2>
+        </br>
+            <h2>ADMIN</h2>
+            <nav>
+                <a href="dashboard.html"> <i class="fas fa-home"></i> Trang chính</a>
+                <a href="manage-category.html" class="active"> <i class="fas fa-list"></i> Quản lý danh mục</a>
+                <a href="manage-product.html"> <i class="fas fa-box"></i> Quản lý sản phẩm</a>
+                <a href="manage-user.html"> <i class="fas fa-users"></i> Quản lý người dùng</a>
+                <a href="manage-order.html"> <i class="fas fa-shopping-cart"></i> Quản lý hóa đơn</a>
+                <a href="statistic.html" class="active"> <i class="fas fa-chart-line"></i> Thống kê kinh doanh</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <header class="top-bar">
+                <input type="text" placeholder="Search...">
+                <a href="login.html" class="logout-button">Đăng xuất</a>
+            </header>
+
+            <!-- Category Management Section -->
+            <section class="management-section">
+                <h1>Quản Lý Danh Mục</h1>
+                <button id="add-category-button" class="add-button">Thêm Danh Mục</button>
+                <table class="management-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Tên Danh Mục</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody id="category-list">
+                        <!-- Danh mục sẽ được thêm qua JavaScript -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal Thêm/Sửa -->
+    <div id="category-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2 id="modal-title">Thêm Danh Mục</h2>
+            <form id="category-form">
+                <input type="hidden" id="category-id">
+                <div>
+                    <label for="category-name">Tên Danh Mục:</label>
+                    <input type="text" id="category-name" required>
+                </div>
+                <button type="submit" id="save-category-button">Lưu</button>
+                <button type="button" id="close-modal-button">Hủy</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="category.js"></script>
+</body>
+</html>

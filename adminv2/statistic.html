@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thống Kê Kinh Doanh</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="statistic.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="admin-dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>
+                <div class="logo">
+                    <img src="../img/logo.png" alt="Organicfood Logo">
+                </div>
+            </h2>
+            <br/>
+            <h2>ADMIN</h2>
+            <nav>
+                <a href="dashboard.html"> <i class="fas fa-home"></i> Trang chính</a>
+                <a href="manage-category.html"> <i class="fas fa-list"></i> Quản lý danh mục</a>
+                <a href="manage-product.html"> <i class="fas fa-box"></i> Quản lý sản phẩm</a>
+                <a href="manage-user.html"> <i class="fas fa-users"></i> Quản lý người dùng</a>
+                <a href="manage-order.html"> <i class="fas fa-shopping-cart"></i> Quản lý hóa đơn</a>
+                <a href="statistic.html" class="active"> <i class="fas fa-chart-line"></i> Thống kê kinh doanh</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <header class="top-bar">
+                <input type="text" placeholder="Search...">
+                <a href="#" class="logout-button">Đăng xuất</a>
+            </header>
+
+            <section class="management-section">
+                <h1>Thống Kê Kinh Doanh</h1>
+
+                <!-- Bộ lọc thời gian -->
+                <div class="filter">
+                    <label for="start-date">Từ ngày:</label>
+                    <input type="date" id="start-date">
+                    <label for="end-date">Đến ngày:</label>
+                    <input type="date" id="end-date">
+                    <button onclick="filterStatistics()">Thống Kê</button>
+                </div>
+
+                <!-- Thống kê mặt hàng -->
+                <h2>Thống Kê Mặt Hàng</h2>
+                <table class="management-table">
+                    <thead>
+                        <tr>
+                            <th>Mặt Hàng</th>
+                            <th>Số Lượng Bán</th>
+                            <th>Tổng Tiền Thu</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody id="product-stats">
+                        <!-- Thống kê mặt hàng sẽ được thêm bằng JavaScript -->
+                    </tbody>
+                </table>
+
+                <!-- Thống kê khách hàng -->
+                <h2>Thống Kê Khách Hàng</h2>
+                <table class="management-table">
+                    <thead>
+                        <tr>
+                            <th>Tên Khách Hàng</th>
+                            <th>Số Hóa Đơn</th>
+                            <th>Tổng Doanh Thu</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody id="customer-stats">
+                        <!-- Thống kê khách hàng sẽ được thêm bằng JavaScript -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script src="statistic.js"></script>
+</body>
+</html>
