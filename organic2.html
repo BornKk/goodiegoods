@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm | GoodieGoods</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Header (giữ nguyên từ trang chính) -->
+  </head>
+  <body>
+  
+    <!-- Header -->
+    <header>
+      <div class="header-container">
+        <!-- Logo -->
+        <div class="logo">
+          <img src="img/logo.png" alt="Organicfood Logo">
+        </div>
+  
+        <!-- Navigation -->
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="about.html">Giới thiệu</a></li>
+            <li class="dropdown">
+              <a href="product.html">Sản phẩm ▼</a>
+              <ul class="dropdown-content">
+                <li><a href="organic1.html">Rau củ hữu cơ</a></li>
+                <li><a href="organic2.html">Trái cây tươi</a></li>
+                <li><a href="organic3.html">Thực phẩm sạch</a></li>
+              </ul>
+            </li>
+  
+            <li><a href="contact.html">Liên hệ</a></li>
+          </ul>
+        </nav>
+        <!-- Search box + Cart -->
+        <div class="header-right">
+          <div class="search-box">
+            <input type="text" placeholder="Tìm kiếm sản phẩm...">
+            <a href="searching-for.html">
+              <button type="button">🔍</button>
+            </a>
+          </div>
+          <div class="cart">
+            <a href="cart.html">
+              <img src="img/cart.jpg" alt="Cart">
+            </a>
+          </div>
+          <div class="login-icon">
+            <div class="header-right">
+              <a href="login.html">
+                  <i class="fas fa-user"></i> <!-- Biểu tượng người dùng -->
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header> 
+
+    <!-- Main Content -->
+    <div class="main-container">
+      <!-- Sidebar Bộ Lọc Tìm Kiếm -->
+      <aside class="filter-sidebar">
+          <h2>Bộ lọc sản phẩm</h2>
+          <form action="#" method="GET" class="filter-form">
+              <!-- Tìm kiếm theo tên -->
+              <label for="search">Tìm kiếm</label>
+              <input type="text" id="search" name="search" placeholder="Tìm tên sản phẩm...">
+              
+              <!-- Thời gian -->
+              <label for="start-date">Thời gian</label>
+              <input type="date" id="start-date" name="start-date" placeholder="Từ ngày">
+              <input type="date" id="end-date" name="end-date" placeholder="Đến ngày">
+              
+              <!-- Dung lượng -->
+              <label for="capacity">Kích cỡ</label>
+              <select id="capacity" name="capacity">
+                  <option value="">Kích cỡ</option>
+                  <option value="small">Nhỏ</option>
+                  <option value="medium">Vừa</option>
+                  <option value="large">Lớn</option>
+              </select>
+              
+              <!-- Loại sản phẩm -->
+              <label for="category">Loại sản phẩm</label>
+              <select id="category" name="category">
+                  <option value="">Tất cả loại</option>
+                  <option value="fruit">Trái cây</option>
+                  <option value="vegetable">Rau củ</option>
+                  <option value="grain">Ngũ cốc</option>
+              </select>
+              
+              <!-- Giá -->
+              <label for="price-range">Giá</label>
+              <input type="number" id="min-price" name="min-price" placeholder="Giá từ">
+              <input type="number" id="max-price" name="max-price" placeholder="Giá đến">
+              <select id="category" name="category">
+                <option value="">Sắp xếp theo nhỏ/lớn</option>
+                <option value="cheap">Từ thấp tới lớn</option>
+                <option value="expensive">Từ lớn tới thấp]</option>
+              </select>
+              <!-- Nút Tìm Kiếm -->
+              <a href="searching-for.html">
+                <button type="submit" class="search-button">Tìm kiếm</button>
+              </a>
+          </form>
+      </aside>
+
+      <!-- Phần danh sách sản phẩm -->
+      <section class="product-list">
+          <h2 style="color: #27ae60;">Trái cây tươi</h2>
+          <div class="products">
+              <!-- Sản phẩm mẫu -->
+			  
+              <div class="product-item">
+                <a href="product-detals.html">
+                  <img src="img/taohuuco.webp" alt="Sản Phẩm 1">
+                </a>
+                  <h3>Táo</h3>
+                  <p>999,000 VND</p>
+                <a href="product-detals.html">
+                  <button>Xem chi tiết</button>
+                </a>
+              </div>
+			  
+              <div class="product-item">
+                <a href="product-detals.html">
+                  <img src="img/add_a_heading__1__66a31254bea34d099e0f7eb57642d285_grande.webp" alt="Táo xanh">
+                </a>
+                  <h3>Táo xanh</h3>
+                  <p>534,000 VND</p>
+                <a href="product-detals.html">
+                  <button>Xem chi tiết</button>
+                </a>
+              </div>
+			  
+              <div class="product-item">
+                <a href="product-detals.html">
+                  <img src="img/add_a_heading_9b34415e7c19413392dc5d48fe06992c_grande.webp" alt="Sản Phẩm 1">
+                </a>
+                  <h3>Chuối</h3>
+                  <p>50,000 VND</p>
+                <a href="product-detals.html">
+                  <button>Xem chi tiết</button>
+                </a>
+              </div>
+			  
+              <div class="product-item">
+                <a href="product-detals.html">
+                  <img src="img/add_a_heading_d2a43e96086f41089a0c3a9c0591e16b_large.webp" alt="Sản Phẩm 1">
+                </a>
+                  <h3>Sầu riêng</h3>
+                  <p>50,000 VND</p>
+                  <button>Xem chi tiết</button>
+            </div>
+			
+            <div class="product-item">
+              <a href="product-detals.html">
+                <img src="img/bo-cuba_504e2fc00ee445d5ba986da1ccc67b0c.webp" alt="Sản Phẩm 1">
+              </a>
+                <h3>Bơ</h3>
+                <p>20,000 VND</p>
+              <a href="product-detals.html">
+                <button>Xem chi tiết</button>
+              </a>
+            </div>
+			
+            <div class="product-item">
+              <a href="product-detals.html">
+                <img src="img/thanh_long_trang_huu_co_kim_hai_-_1kg_b2e35115c35e49e49a18a0789dcb224d_grande.webp" alt="Sản Phẩm 1">
+              </a>
+                <h3>Thanh long</h3>
+                <p>70,000 VND</p>
+              <a href="product-detals.html">
+                <button>Xem chi tiết</button>
+              </a>
+            </div>
+			
+            <div class="product-item">
+              <a href="product-detals.html">
+                <img src="img/untitled_design_99eaeb7141d44f45a924f6890f8222c6.webp" alt="Sản Phẩm 1">
+              </a>
+                <h3>Táo</h3>
+                <p>10,000 VND</p>
+              <a href="product-detals.html">
+                <button>Xem chi tiết</button>
+              </a>
+          </div>
+		  
+          <div class="product-item">
+            <a href="product-detals.html">
+              <img src="img/sung-my.webp" alt="Sản Phẩm 1">
+            </a>
+              <h3>Trái Sung</h3>
+              <p>190,000 VND</p>
+            <a href="product-detals.html">
+              <button>Xem chi tiết</button>
+            </a>
+        </div>
+      </section>
+      
+  </div>
+
+<!-- Phần phân trang -->
+<div class="pagination">
+    <a href="#" class="page-link">1</a>
+    <a href="#" class="page-link">2</a>
+    <a href="#" class="page-link">3</a>
+    <a href="#" class="page-link">4</a>
+    <a href="#" class="page-link">5</a>
+    <span>...</span>
+    <a href="#" class="page-link">10</a>
+</div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+          <!-- Phần thông tin liên hệ -->
+          <div class="footer-about">
+              <h3>Organic Shop</h3>
+              <p>Mang đến cho bạn những sản phẩm hữu cơ tốt nhất từ thiên nhiên.</p>
+              <p>Email: contact@GoodieGoods.com</p>
+              <p>Điện thoại: 0365883102</p>
+          </div>
+  
+          <!-- Phần các liên kết quan trọng -->
+          <div class="footer-links">
+              <h4>Liên kết nhanh</h4>
+              <ul>
+                  <li><a href="index.html">Trang Chủ</a></li>
+                  <li><a href="product.html">Sản Phẩm</a></li>
+                  <li><a href="about.html">Về Chúng Tôi</a></li>
+                  <li><a href="contact.html">Liên Hệ</a></li>
+                  <li><a href="#">Blog</a></li>
+              </ul>
+          </div>
+  
+          <!-- Phần các biểu tượng mạng xã hội -->
+          <div class="footer-social">
+              <h4>Kết nối với chúng tôi</h4>
+              <div class="social-icons">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+              </div>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <p>&copy; 2024 Organic Shop. Được thiết kế bởi đội ngũ Organic.</p>
+      </div>
+  </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

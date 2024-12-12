@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết Sản phẩm | GoodieGoods</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+</head>
+<body>
+    <!-- Header (giữ nguyên từ trang chính) -->
+    <header>
+      <div class="header-container">
+        <!-- Logo -->
+        <div class="logo">
+          <img src="img/logo.png" alt="Organicfood Logo">
+        </div>
+  
+        <!-- Navigation -->
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="logined.html">Trang chủ</a></li>
+            <li><a href="about-logged.html">Giới thiệu</a></li>
+            <li class="dropdown">
+              <a href="product-logged.html">Sản phẩm ▼</a>
+              <ul class="dropdown-content">
+                <li><a href="organic1-logged.html">Rau củ hữu cơ</a></li>
+                <li><a href="organic2-logged.html">Trái cây tươi</a></li>
+                <li><a href="organic3-logged.html">Thực phẩm sạch</a></li>
+              </ul>
+            </li>
+  
+            <li><a href="contact-logged.html">Liên hệ</a></li>
+          </ul>
+        </nav>
+        <!-- Search box + Cart -->
+        <div class="header-right">
+          <div class="search-box">
+            <input type="text" placeholder="Tìm kiếm sản phẩm...">
+            <a href="searching-for-logged.html">
+              <button type="button">🔍</button>
+            </a>
+          </div>
+          <div class="cart">
+            <a href="contact.html" class="logout-button">Đăng xuất</a>
+            <a href="cart-logged.html">
+              <img src="img/cart.jpg" alt="Cart">
+            </a>
+          </div>
+          <div class="login-icon">
+            <div class="header-right">
+              <a href="login.html">
+                  <i class="fas fa-user"></i> <!-- Biểu tượng người dùng -->
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header> 
+    <!-- Nội dung Liên Hệ -->
+    <section class="contact-section">
+      <h2>Liên Hệ Với Chúng Tôi</h2>
+      <p>Chúng tôi luôn sẵn lòng lắng nghe ý kiến của bạn!</p>
+      
+      <form class="contact-form">
+          <label for="name">Tên của bạn</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="message">Lời nhắn</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit">Gửi Lời Nhắn</button>
+      </form>
+      
+      <div class="contact-info">
+          <p><strong>Địa chỉ:</strong> 273 An Dương Vương, Quận 5, TP.HCM</p>
+          <p><strong>Email:</strong> contact@GoodieGoods.com</p>
+          <p><strong>Điện thoại:</strong> 0365883102</p>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+          <!-- Phần thông tin liên hệ -->
+          <div class="footer-about">
+              <h3>Organic Shop</h3>
+              <p>Mang đến cho bạn những sản phẩm hữu cơ tốt nhất từ thiên nhiên.</p>
+              <p>Email: contact@GoodieGoods.com</p>
+              <p>Điện thoại: 0365883102</p>
+          </div>
+  
+          <!-- Phần các liên kết quan trọng -->
+          <footer class="footer">
+            <div class="footer-container">
+                <!-- Phần thông tin liên hệ -->
+                <div class="footer-about">
+                    <h3>Organic Shop</h3>
+                    <p>Mang đến cho bạn những sản phẩm hữu cơ tốt nhất từ thiên nhiên.</p>
+                    <p>Email: contact@GoodieGoods.com</p>
+                    <p>Điện thoại: 0365883102</p>
+                </div>
+        
+                <!-- Phần các liên kết quan trọng -->
+                <div class="footer-links">
+                    <h4>Liên kết nhanh</h4>
+                    <ul>
+                        <li><a href="index.html">Trang Chủ</a></li>
+                        <li><a href="product.html">Sản Phẩm</a></li>
+                        <li><a href="about.html">Về Chúng Tôi</a></li>
+                        <li><a href="contact.html">Liên Hệ</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+        
+                <!-- Phần các biểu tượng mạng xã hội -->
+                <div class="footer-social">
+                    <h4>Kết nối với chúng tôi</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Organic Shop. Được thiết kế bởi đội ngũ Organic.</p>
+            </div>
+        </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+.success-page {
+  padding: 40px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.success-message {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.success-icon {
+  font-size: 80px;
+  color: #28a745;
+  margin-bottom: 20px;
+}
+
+.success-message h1 {
+  color: #28a745;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.success-message p {
+  color: #555;
+  font-size: 18px;
+}
+
+.success-message .order-id {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.success-actions .btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.success-actions .btn-green {
+  background-color: #28a745;
+  color: white;
+}
+
+.success-actions .btn-green:hover {
+  background-color: #218838;
+}
+
+.success-actions .btn-outline-green {
+  border: 2px solid #28a745;
+  color: #28a745;
+}
+
+.success-actions .btn-outline-green:hover {
+  background-color: #28a745;
+  color: white;
+}
+
+.order-summary {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.order-summary ul {
+  list-style: none;
+  padding: 0;
+}
+
+.order-summary ul li {
+  font-size: 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-summary ul li:last-child {
+  border-bottom: none;
+}

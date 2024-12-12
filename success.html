@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng - Organic Web</title>
+    <link rel="stylesheet" href="success.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="success.js">
+</head>
+<body>
+    <div class="cart-page">
+        <!-- Header -->
+        <header>
+          <div class="header-container">
+            <!-- Logo -->
+            <div class="logo">
+              <img src="img/logo.png" alt="Organicfood Logo">
+            </div>
+      
+            <!-- Navigation -->
+            <nav>
+              <ul class="nav-menu">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li class="dropdown">
+                  <a href="product.html">Sản phẩm ▼</a>
+                  <ul class="dropdown-content">
+                    <li><a href="organic1.html">Rau củ hữu cơ</a></li>
+                    <li><a href="organic2.html">Trái cây tươi</a></li>
+                    <li><a href="organic3.html">Thực phẩm sạch</a></li>
+                  </ul>
+                </li>
+      
+                <li><a href="contact.html">Liên hệ</a></li>
+              </ul>
+            </nav>
+            <!-- Search box + Cart -->
+            <div class="header-right">
+              <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                <a href="searching-for.html">
+                  <button type="button">🔍</button>
+                </a>
+              </div>
+              <div class="cart">
+                <a href="cart.html">
+                  <img src="img/cart.jpg" alt="Cart">
+                </a>
+              </div>
+              <div class="login-icon">
+                <div class="header-right">
+                  <a href="login.html">
+                      <i class="fas fa-user"></i> <!-- Biểu tượng người dùng -->
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>   
+              <!-- Main Content -->
+    <main class="success-page">
+      <section class="success-message">
+          <div class="success-icon">
+              <i class="fas fa-check-circle"></i>
+          </div>
+          <h1>Thanh Toán Thành Công!</h1>
+          <p>Cảm ơn bạn đã đặt hàng tại <strong>Organic Web</strong>. Chúng tôi sẽ xử lý đơn hàng của bạn ngay lập tức và sẽ giao hàng trong thời gian sớm nhất.</p>
+          <p class="order-id">Mã đơn hàng của bạn là: <strong id="order-id">#123456</strong></p>
+          <div class="success-actions">
+              <a href="index.html" class="btn btn-green">Quay Lại Trang Chủ</a>
+              <a href="product.html" class="btn btn-outline-green">Tiếp Tục Mua Sắm</a>
+          </div>
+      </section>
+
+      <!-- Order Summary -->
+      <div id="order-summary" class="order-summary">
+        <h2 class="text-center">Tóm Tắt Đơn Hàng</h2>
+        <div id="order-details">
+          <!-- Thông tin đơn hàng sẽ được hiển thị ở đây -->
+        </div>
+      </div>
+  </main>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container">
+                <!-- Phần thông tin liên hệ -->
+                <div class="footer-about">
+                    <h3>Organic Shop</h3>
+                    <p>Mang đến cho bạn những sản phẩm hữu cơ tốt nhất từ thiên nhiên.</p>
+                    <p>Email: contact@GoodieGoods.com</p>
+                    <p>Điện thoại: 0365883102</p>
+                </div>
+        
+                <!-- Phần các liên kết quan trọng -->
+                <div class="footer-links">
+                    <h4>Liên kết nhanh</h4>
+                    <ul>
+                        <li><a href="index.html">Trang Chủ</a></li>
+                        <li><a href="product.html">Sản Phẩm</a></li>
+                        <li><a href="about.html">Về Chúng Tôi</a></li>
+                        <li><a href="contact.html">Liên Hệ</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+        
+                <!-- Phần các biểu tượng mạng xã hội -->
+                <div class="footer-social">
+                    <h4>Kết nối với chúng tôi</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Organic Shop. Được thiết kế bởi đội ngũ Organic.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

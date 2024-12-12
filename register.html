@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập - Organic Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Liên kết FontAwesome cho biểu tượng -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="register.js">
+</head>
+<body>
+    <!-- Header (giống với trang chủ) -->
+    <header>
+        <div class="header-container">
+          <!-- Logo -->
+          <div class="logo">
+            <img src="img/logo.png" alt="Organicfood Logo">
+          </div>
+    
+          <!-- Navigation -->
+          <nav>
+            <ul class="nav-menu">
+              <li><a href="index.html">Trang chủ</a></li>
+              <li><a href="about.html">Giới thiệu</a></li>
+              <li class="dropdown">
+                <a href="product.html">Sản phẩm ▼</a>
+                <ul class="dropdown-content">
+                  <li><a href="organic1.html">Rau củ hữu cơ</a></li>
+                  <li><a href="organic2.html">Trái cây tươi</a></li>
+                  <li><a href="organic3.html">Thực phẩm sạch</a></li>
+                </ul>
+              </li>
+    
+              <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+          </nav>
+          <!-- Search box + Cart -->
+          <div class="header-right">
+            <div class="search-box">
+              <input type="text" placeholder="Tìm kiếm sản phẩm...">
+              <a href="searching-for.html">
+                <button type="button">🔍</button>
+              </a>
+            </div>
+            <div class="cart">
+              <a href="cart.html">
+                <img src="img/cart.jpg" alt="Cart">
+              </a>
+            </div>
+            <div class="login-icon">
+              <div class="header-right">
+                <a href="login.html">
+                    <i class="fas fa-user"></i> <!-- Biểu tượng người dùng -->
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header> 
+
+    <main>
+        <div class="form-container">
+            <h2>Đăng Ký Tài Khoản</h2>
+            <p>Tham gia cộng đồng Organic để nhận những ưu đãi tốt nhất!</p>
+            <form id="register-form">
+                <label for="name">Họ và Tên</label>
+                <input type="text" id="name" name="name" placeholder="Nhập họ và tên" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Nhập email của bạn" required>
+
+                <label for="password">Mật Khẩu</label>
+                <input type="password" id="password" name="password" placeholder="Nhập mật khẩu" required>
+
+                <label for="confirm-password">Xác Nhận Mật Khẩu</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Xác nhận mật khẩu" required>
+
+                <button type="submit" class="btn-register">Đăng Ký</button>
+            </form>
+        </div>
+                <!-- Modal thông báo -->
+        <div id="success-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" id="close-modal">&times;</span>
+                <h2>Đăng Ký Thành Công!</h2>
+                <p>Chúc mừng bạn đã gia nhập cộng đồng Organic. Hãy khám phá thêm nhiều sản phẩm tuyệt vời!</p>
+                <button onclick="window.location.href='index.html'" class="btn-home">Về Trang Chủ</button>
+            </div>
+        </div>
+        <div id="success-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" id="close-modal">&times;</span>
+                <h2>Đăng Ký Thành Công!</h2>
+                <p>Chúc mừng bạn đã gia nhập cộng đồng Organic. Bạn sẽ được chuyển về trang chủ sau 3 giây.</p>
+                <button onclick="window.location.href='index.html'" class="btn-home">Về Trang Chủ Ngay</button>
+            </div>
+        </div>
+        <script>
+                            // Lấy các phần tử DOM cần thiết
+                const registerForm = document.getElementById("register-form");
+                const successModal = document.getElementById("success-modal");
+                const closeModal = document.getElementById("close-modal");
+
+                // Xử lý khi form được gửi đi
+                registerForm.addEventListener("submit", function (event) {
+                    event.preventDefault(); // Ngăn hành vi gửi form mặc định
+
+                    // Giả lập kiểm tra dữ liệu đầu vào (nếu cần)
+                    const password = document.getElementById("password").value;
+                    const confirmPassword = document.getElementById("confirm-password").value;
+
+                    if (password !== confirmPassword) {
+                        alert("Mật khẩu và xác nhận mật khẩu không khớp. Vui lòng thử lại!");
+                        return;
+                    }
+
+                    // Hiển thị modal "Đăng ký thành công"
+                    successModal.style.display = "block";
+
+                    // Tự động chuyển hướng về trang index.html sau 3 giây
+                    setTimeout(() => {
+                        window.location.href = "index.html";
+                    }, 3000); // Chuyển sau 3 giây
+                });
+
+                // Đóng modal khi nhấn vào nút "X" (nếu cần)
+                closeModal.addEventListener("click", function () {
+                    successModal.style.display = "none";
+                });
+
+        </script>
+    </main>
+
+    <!-- Footer (giống với trang chủ) -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Phần thông tin liên hệ -->
+            <div class="footer-about">
+                <h3>Organic Shop</h3>
+                <p>Mang đến cho bạn những sản phẩm hữu cơ tốt nhất từ thiên nhiên.</p>
+                <p>Email: contact@GoodieGoods.com</p>
+                <p>Điện thoại: 0365883102</p>
+            </div>
+    
+            <!-- Phần các liên kết quan trọng -->
+            <div class="footer-links">
+                <h4>Liên kết nhanh</h4>
+                <ul>
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="product.html">Sản Phẩm</a></li>
+                    <li><a href="about.html">Về Chúng Tôi</a></li>
+                    <li><a href="contact.html">Liên Hệ</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+    
+            <!-- Phần các biểu tượng mạng xã hội -->
+            <div class="footer-social">
+                <h4>Kết nối với chúng tôi</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Organic Shop. Được thiết kế bởi đội ngũ Organic.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="login.js"></script>
+</body>
+</html>
